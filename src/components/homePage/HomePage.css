@@ -1,0 +1,23 @@
+.div {
+  background-color: rgb(246, 231, 233);
+  text-align: center;
+  margin-top: 1px;
+}
+.div-text h2 {
+  padding-top: 50px;
+  font-size: 40px;
+  font-family: normal;
+}
+
+.img-div {
+  text-align: center;
+  width: 500px;
+  height: 400px;
+  margin-top: 50px;
+  padding-left: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.img-div img {
+  padding-right: 50px;
+}
