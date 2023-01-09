@@ -112,6 +112,7 @@ const CartContextProvider = ({ children }) => {
     });
   };
   function deleteCartProduct(id) {
+    console.log(1);
     let cart = JSON.parse(localStorage.getItem("cart"));
     cart.products = cart.products.filter((elem) => elem.item.id !== id);
     cart.totalPrice = calcTotalPrice(cart.products);

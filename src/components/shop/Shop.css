@@ -10,10 +10,13 @@
 }
 .img-img {
   text-align: center;
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 200px;
   margin-top: 50px;
   padding-left: 100px;
   display: flex;
   justify-content: space-between;
+}
+.img-img img {
+  padding-right: 50px;
 }

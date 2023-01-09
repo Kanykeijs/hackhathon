@@ -20,7 +20,7 @@ const ProductDetails = () => {
         <Grid item xs={6}>
           <Typography variant="h3">{oneProduct.name}</Typography>
           <Typography variant="subtitle">{oneProduct.type}</Typography>
-          <Typography variant="caption">{oneProduct.price}$</Typography>
+          <Typography variant="caption">{oneProduct.price}сом</Typography>
           <Typography variant="caption">{oneProduct.description}</Typography>
           <Box>
             <Button>Добавить в корзину</Button>

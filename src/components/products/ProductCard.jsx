@@ -43,7 +43,7 @@ export default function ProductCard({ item }) {
           variant="h5"
           component="div"
         >
-          {item.price}$
+          {item.price}сом
         </Typography>
         <Typography
           sx={{

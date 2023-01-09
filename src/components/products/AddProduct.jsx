@@ -6,7 +6,7 @@ import { useProducts } from "../../contexts/ProductsContext";
 
 const AddProduct = () => {
   const navigate = useNavigate();
-  const { AddProduct } = useProducts();
+  const { addProduct } = useProducts();
 
   const [product, setProduct] = useState({
     name: "",
@@ -77,7 +77,7 @@ const AddProduct = () => {
       />
       <Button
         onClick={() => {
-          AddProduct(product);
+          addProduct(product);
           navigate(-1);
         }}
         variant="outlined"

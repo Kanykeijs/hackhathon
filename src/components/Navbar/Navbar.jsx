@@ -9,7 +9,7 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-// import MenuIcon from "@mui/icons-material/MenuIcon";
+//import MenuIcon from "@mui/icons-material/MenuIcon";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
@@ -20,7 +20,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { ADMIN } from "../../helpers/consts";
 // import { useCart } from "../../contexts/cartContex";
 //import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import InstagramIcon from "@mui/icons-material/Instagram";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import { useCart } from "../../contexts/CartContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -67,18 +69,18 @@ const pages = [
   { name: "Услуги и цены", link: "/price", id: 2 },
   { name: "Контакты", link: "/contacts", id: 3 },
   { name: "online-магазин", link: "/about", id: 4 },
-  { name: "products", link: "/products", id: 5 },
+  //{ name: "products", link: "/products", id: 5 },
 ];
 
 export default function Navbar() {
   const navigate = useNavigate();
 
   const { user, handleLogout } = useAuth();
-  //   const { getCart, cart } = useCart();
+  const { getCart, cart } = useCart();
 
-  //   React.useEffect(() => {
-  //     getCart();
-  //   }, []);
+  React.useEffect(() => {
+    getCart();
+  }, []);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -253,11 +255,11 @@ export default function Navbar() {
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
-              //   onClick={() => navigate("/cart")}
+              onClick={() => navigate("/cart")}
             >
-              {/* <Badge badgeContent={cart?.products.length} color="error"> */}
-              <InstagramIcon />
-              {/* </Badge> */}
+              <Badge badgeContent={cart?.products.length} color="error">
+                <ShoppingBagIcon />
+              </Badge>
             </IconButton>
 
             <IconButton

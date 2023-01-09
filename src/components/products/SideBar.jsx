@@ -29,8 +29,8 @@ const SideBar = () => {
   }, [search]);
 
   return (
-    <Grid item md={3}>
-      <Paper elevation={5} sx={{ p: 2 }}>
+    <Grid className="grid" item md={10}>
+      <Paper elevation={5} sx={{ p: 2, width: 300, height: 500 }}>
         <TextField
           fullWidth
           id="input-with-icon-textfield"
@@ -53,20 +53,16 @@ const SideBar = () => {
             <RadioGroup onChange={(e) => fetchByParams("type", e.target.value)}>
               <FormControlLabel value="all" control={<Radio />} label="all" />
               <FormControlLabel
-                value="telephone"
+                value="Gel Polish"
                 control={<Radio />}
-                label="telephone"
+                label="Gel Polish"
               />
               <FormControlLabel
-                value="laptop"
+                value="Luxsio"
                 control={<Radio />}
-                label="laptop"
+                label="Luxsio"
               />
-              <FormControlLabel
-                valur="watch"
-                control={<Radio />}
-                label="watch"
-              />
+              <FormControlLabel valur="Base" control={<Radio />} label="Base" />
             </RadioGroup>
           </FormControl>
           <input
@@ -85,19 +81,19 @@ const SideBar = () => {
             >
               <FormControlLabel value="all" control={<Radio />} label="all" />
               <FormControlLabel
-                value="100"
+                value="1200"
                 control={<Radio />}
-                label="less then 100$"
+                label="less then 1200сом"
               />
               <FormControlLabel
-                value="600"
+                value="1700"
                 control={<Radio />}
-                label="less then 600$"
+                label="less then 1700сом"
               />
               <FormControlLabel
-                value="1300"
+                value="1900"
                 control={<Radio />}
-                label="less then 1300$"
+                label="less then 1900com"
               />
             </RadioGroup>
           </FormControl>

@@ -7,10 +7,10 @@ const ProductsPage = () => {
   return (
     <Box p={5}>
       ProductsPage
-      {/* <Grid container spacing={3}> */}
-      <ProductsList />
-      <SideBar />
-      {/* </Grid> */}
+      <Grid container spacing={3}>
+        <ProductsList />
+        <SideBar />
+      </Grid>
     </Box>
   );
 };

@@ -1,4 +1,5 @@
-import styled from "@emotion/styled/types/base";
+import { styled } from "@mui/material/styles";
+
 import { Button, tableCellClasses } from "@mui/material";
 import {
   Paper,
@@ -45,12 +46,9 @@ const rows = [
 
 export default function Cart() {
   const { getCart, cart, changeProductCount, deleteCartProduct } = useCart();
-
   React.useEffect(() => {
     getCart();
   }, []);
-
-  console.log(cart);
 
   const cartCleaner = () => {
     localStorage.removeItem("cart");

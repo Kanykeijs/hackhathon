@@ -1,14 +1,17 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import Cart from "../components/cart/Cart";
 import Contacts from "../components/contacts/Contacts";
 import HomePage from "../components/homePage/HomePage";
+import SideBar from "../components/products/SideBar";
 import Services from "../components/services/Services";
 import Shop from "../components/shop/Shop";
 import { useAuth } from "../contexts/authContext";
 import { ADMIN } from "../helpers/consts";
 import AdminPage from "../pages/AdminPage";
-import EditProductPage from "../pages/EditProductPage";
+//import EditProductPage from "../pages/EditProductPage";
 import AuthPage from "../pages/AuthPage";
+import EditProductPage from "../pages/EditProductPage";
 import ProductsPage from "../pages/ProductsPage";
 
 const MainRoutes = () => {
@@ -40,9 +43,19 @@ const MainRoutes = () => {
       id: 5,
     },
     {
+      link: "/",
+      element: <SideBar />,
+      id: 6,
+    },
+    {
       link: "/products",
       element: <ProductsPage />,
-      id: 6,
+      id: 7,
+    },
+    {
+      link: "/cart",
+      element: <Cart />,
+      id: 8,
     },
   ];
 
