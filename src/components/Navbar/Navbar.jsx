@@ -66,7 +66,8 @@ const pages = [
   { name: "Наши Салоны", link: "/beauty", id: 1 },
   { name: "Услуги и цены", link: "/price", id: 2 },
   { name: "Контакты", link: "/contacts", id: 3 },
-  { name: "Пресса о нас", link: "/about us", id: 4 },
+  { name: "online-магазин", link: "/about", id: 4 },
+  { name: "products", link: "/products", id: 5 },
 ];
 
 export default function Navbar() {

@@ -3,10 +3,13 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Contacts from "../components/contacts/Contacts";
 import HomePage from "../components/homePage/HomePage";
 import Services from "../components/services/Services";
+import Shop from "../components/shop/Shop";
 import { useAuth } from "../contexts/authContext";
 import { ADMIN } from "../helpers/consts";
 import AdminPage from "../pages/AdminPage";
 import EditProductPage from "../pages/EditProductPage";
+import AuthPage from "../pages/AuthPage";
+import ProductsPage from "../pages/ProductsPage";
 
 const MainRoutes = () => {
   const { user } = useAuth();
@@ -25,6 +28,21 @@ const MainRoutes = () => {
       link: "/contacts",
       element: <Contacts />,
       id: 3,
+    },
+    {
+      link: "/about",
+      element: <Shop />,
+      id: 4,
+    },
+    {
+      link: "/auth",
+      element: <AuthPage />,
+      id: 5,
+    },
+    {
+      link: "/products",
+      element: <ProductsPage />,
+      id: 6,
     },
   ];
 

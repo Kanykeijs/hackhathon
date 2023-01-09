@@ -17,9 +17,9 @@ const HomePage = () => {
           <img src={require("./spa.jpeg")} alt="" />
         </div>
         <div className="img-div">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+          <img src={require("./set.jpeg")} alt="" />
+          <img src={require("./mate.jpeg")} alt="" />
+          <img src={require("./saloon.jpeg")} alt="" />
         </div>
       </div>
     </div>

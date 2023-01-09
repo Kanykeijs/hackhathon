@@ -7,7 +7,7 @@ import { useProducts } from "../../contexts/ProductsContext";
 import ProductCard from "./ProductCard";
 
 const ProductsList = () => {
-  const [searchParams, serSearchParams] = useSearchParams();
+  //   const [searchParams, serSearchParams] = useSearchParams();
   const { getProducts, products } = useProducts();
 
   const [page, setPage] = useState(1);
@@ -29,7 +29,7 @@ const ProductsList = () => {
 
   useEffect(() => {
     getProducts();
-  }, [searchParams]);
+  }, []);
 
   return (
     <Grid
