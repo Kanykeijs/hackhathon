@@ -7,10 +7,12 @@
   padding-top: 50px;
   font-size: 40px;
   font-family: normal;
+  /* font-style: italic; */
 }
-
+/* .h2 {
+  margin-top: 10px;
+} */
 .img-div {
-  text-align: center;
   width: 500px;
   height: 400px;
   margin-top: 50px;
@@ -20,4 +22,10 @@
 }
 .img-div img {
   padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+}
+.img-div img:hover {
+  width: 510px;
+  height: 410px;
 }

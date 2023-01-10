@@ -14,7 +14,11 @@ import { useCart } from "../../contexts/CartContext";
 import { useProducts } from "../../contexts/ProductsContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ADMIN } from "../../helpers/consts";
+import DeleteIcon from "@mui/icons-material/Delete";
+import BorderColorIcon from "@mui/icons-material/BorderColor";
 
 export default function ProductCard({ item }) {
   const navigate = useNavigate();
@@ -62,8 +66,12 @@ export default function ProductCard({ item }) {
       <CardActions>
         {email == ADMIN ? (
           <>
-            <Button onClick={() => deleteProduct(item.id)}>Delete</Button>
-            <Button onClick={() => navigate(`/edit/${item.id}`)}>Edit</Button>
+            <Button onClick={() => deleteProduct(item.id)}>
+              <DeleteIcon />
+            </Button>
+            <Button onClick={() => navigate(`/edit/${item.id}`)}>
+              <BorderColorIcon />
+            </Button>
           </>
         ) : (
           <IconButton onClick={() => addProductToCart(item)}>
@@ -78,6 +86,8 @@ export default function ProductCard({ item }) {
             ) : (
               <>
                 <AddShoppingCartIcon />
+                <FavoriteBorderIcon />
+                <StarBorderIcon />
               </>
             )}
           </IconButton>

@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-
+import CardMedia from "@mui/material/CardMedia";
 import { Button, tableCellClasses } from "@mui/material";
 import {
   Paper,
@@ -55,7 +55,10 @@ export default function Cart() {
     getCart();
   };
   return (
-    <TableContainer component={Paper}>
+    <TableContainer
+      sx={{ backgroundColor: "rgb(246, 231, 233)" }}
+      component={Paper}
+    >
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -102,7 +105,14 @@ export default function Cart() {
           ))}
         </TableBody>
       </Table>
-      <Button onClick={cartCleaner}>BUY NOW FOR</Button>
+      <Button sx={{ height: "400px" }} onClick={cartCleaner}>
+        BUY NOW FOR
+      </Button>
+      <CardMedia component="" alt="green iguana" height="140" />
+      {/* <img 
+        src="https://bakai.kg/media/single_backgrounds/VISA_classic.png"
+        alt=""
+      /> */}
     </TableContainer>
   );
 }

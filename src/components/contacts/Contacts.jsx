@@ -50,6 +50,7 @@ const Contacts = () => {
           <br />
           <h4 className="texth4">school@nails.com</h4>
         </div>
+        <br />
       </div>
     </div>
   );

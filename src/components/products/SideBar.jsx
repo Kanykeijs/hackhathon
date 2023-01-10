@@ -30,7 +30,16 @@ const SideBar = () => {
 
   return (
     <Grid className="grid" item md={10}>
-      <Paper elevation={5} sx={{ p: 2, width: 300, height: 500 }}>
+      <Paper
+        elevation={5}
+        sx={{
+          p: 2,
+          width: 500,
+          height: 270,
+          marginTop: 2,
+          backgroundColor: "#e0f2f1",
+        }}
+      >
         <TextField
           fullWidth
           id="input-with-icon-textfield"
